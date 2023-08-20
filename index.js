@@ -10,10 +10,10 @@ const mongoose=require ("mongoose");
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://pushpeshjoshi141:KMfxyxj2Hw8vKZ2N@fataldinazor.luag4gu.mongodb.net/blogDB?retryWrites=true&w=majority", {  
   useNewUrlParser: true, 
