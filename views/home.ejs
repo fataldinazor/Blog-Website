@@ -13,7 +13,7 @@
     
     <% posts.forEach(function(post){ %>
     <%const shortString= truncateString(post.post,100);%>
-    <h2> <%= post.title %> </h2>
+    <h3> <%= post.title %> </h3>
   <p> <%=shortString  %>  
     <a href="/post/<%= post.title %>"> Read more</a>
 </p>
